@@ -10,9 +10,9 @@ import store from './store'
 
 //按需引入
 
-import { Calendar ,Icon,Button ,Cell, CellGroup,NavBar, Tabbar, TabbarItem, Col, Row ,Tab, Tabs,NumberKeyboard ,Field} from 'vant';
+import { Calendar , Swipe,SwipeItem,Lazyload,Icon,Button ,Cell,CellGroup,NavBar, Tabbar, TabbarItem, Col, Row ,Tab, Tabs,NumberKeyboard ,Field} from 'vant';
 import {Sidebar, SidebarItem,Pagination,Toast,Uploader   } from 'vant';
-Vue.use(Calendar).use(Button).use(Cell).use(CellGroup).use(NavBar).use(Icon).use(Tabbar).use(TabbarItem).use(Col).use(Row).use(Tab).use(Tabs).use(NumberKeyboard).use(Field);
+Vue.use(Calendar).use(Swipe).use(SwipeItem).use(Lazyload).use(Button).use(Cell).use(CellGroup).use(NavBar).use(Icon).use(Tabbar).use(TabbarItem).use(Col).use(Row).use(Tab).use(Tabs).use(NumberKeyboard).use(Field);
 Vue.use(Sidebar).use(Toast).use(SidebarItem).use(Pagination).use(Uploader);
 Vue.config.productionTip = false
 import '@/assets/css/rest.css'
