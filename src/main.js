@@ -17,6 +17,7 @@ Vue.use(Sidebar).use(Toast).use(SidebarItem).use(Pagination).use(Uploader);
 Vue.config.productionTip = false
 import '@/assets/css/rest.css'
 import '@/assets/js/rem.js'
+import '@/mock/mock.js'
 new Vue({
   router,
   store,
