@@ -1,10 +1,13 @@
-const SERVERUOL = 'http://wwww.zhangzhong.com/';
+ const MOCK = 'http://wwww.zhangzhong.com/';
+const SERVERUOL = 'http://localhost:3000/';
 
 const URL  = {
-    getVarietyItem:SERVERUOL+'getVarietyItem',
+    getVarietyItem:MOCK+'getVarietyItem',
     getHotProduct:SERVERUOL+'getHotProduct',
     regUser:SERVERUOL+'user/regUser',
     loginUser:SERVERUOL+'user/loginUser',
+    getTypes:SERVERUOL+'type/getTypes',
+    getProductsByType:SERVERUOL+'product/getProductsByType',
 };
 
 export default URL;
