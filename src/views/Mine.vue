@@ -91,9 +91,8 @@ export default {
               this.$toast.success('登录成功');
                 //保存登录信息
               this.loginAction(res.data.userInfo);
-              this.$router.push('/');
+              this.$router.go(-1);
               console.log(res);
-           
           }
         })
         .catch(err => {

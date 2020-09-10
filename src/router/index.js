@@ -4,28 +4,47 @@ import Home from '../views/Home.vue'
 import Classify from '../views/Classify.vue'
 import Mine from '../views/Mine.vue'
 import Cart from '../views/Cart.vue'
+import Detail from '../views/Detail.vue'
+import FootBar from '../components/FootBar.vue'
 Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    components: {
+      default:Home,
+      'foot-bar':FootBar
+    }
   },
   {
     path: '/classify',
     name: 'Classify',
-    component: Classify,
+    components: {
+      default:Classify,
+      'foot-bar':FootBar
+    }
   },
   {
     path: '/mine',
     name: 'Mine',
-    component: Mine
+    components: {
+      default:Mine,
+      'foot-bar':FootBar
+    }
   },
   {
     path: '/cart',
     name: 'Cart',
-    component: Cart
+    components: {
+      default:Cart,
+      'foot-bar':FootBar
+    }
   },
+  {
+    path:'/detail',
+    name:'Detail',
+    component:Detail
+  }
 
 
 ]

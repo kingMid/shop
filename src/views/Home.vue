@@ -3,7 +3,7 @@
     <!-- 头部顶部 -->
     <van-nav-bar title="商城" class="nav-title">
       <van-icon name="search" slot="left"></van-icon>
-      <van-icon @click="$router.push('/mine')" slot="right">{{userInfo.userName}}</van-icon>
+      <van-icon @click="$router.push('/mine')" slot="right">{{JSON.stringify(userInfo)==='{}'?'未登录':userInfo.userName }}</van-icon>
     </van-nav-bar>
     <!-- 轮播图 -->
     <div class="carousel">

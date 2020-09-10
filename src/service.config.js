@@ -8,6 +8,7 @@ const URL  = {
     loginUser:SERVERUOL+'user/loginUser',
     getTypes:SERVERUOL+'type/getTypes',
     getProductsByType:SERVERUOL+'product/getProductsByType',
+    getDetail:SERVERUOL+'product/getDetail',
 };
 
 export default URL;
