@@ -104,8 +104,8 @@ export default {
     goDetail(id){
       console.log(id);
       this.$router.push({
-        name:'Detail',
-        params:{
+        path:'detail',
+        query:{
           id:id
         }
       });

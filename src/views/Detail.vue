@@ -12,7 +12,7 @@
       <van-goods-action>
         <van-goods-action-icon icon="chat-o" text="客服" />
         <van-goods-action-icon icon="shop-o" text="店铺" />
-        <van-goods-action-button color="#be99ff" type="warning" text="加入购物车" @click="addCart"/>
+        <van-goods-action-button color="#be99ff" type="warning" text="加入购物车" @click="addCart" />
         <van-goods-action-button color="#7232dd" type="danger" text="立即购买" />
       </van-goods-action>
     </div>
@@ -26,7 +26,7 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
-      detail:{},
+      detail: {},
     };
   },
   created() {
@@ -34,12 +34,12 @@ export default {
       url: url.getDetail,
       method: "get",
       params: {
-        id: this.$route.params.id,
+        id: this.$route.query.id,
       },
     })
       .then((res) => {
         this.detail = res.data;
-        
+        console.log(this.detail);
       })
       .catch((err) => {
         console.log(err);
@@ -56,9 +56,25 @@ export default {
         setTimeout(() => {
           this.$router.push("/mine");
         }, 1500);
-      }else{
-          //插入购物车
-
+      } else {
+        //插入购物车
+        axios({
+          url: url.addCart,
+          method: "post",
+          data: {
+            productId: this.detail._id,
+            userId: this.userInfo._id,
+          },
+        })
+          .then((res) => {
+              if(res.data.code ==200){
+                  this.$toast.success(res.data.message)
+              }
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       }
     },
   },

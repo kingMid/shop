@@ -43,7 +43,7 @@ Vue.use(VueRouter)
   {
     path:'/detail',
     name:'Detail',
-    component:Detail
+    component:Detail,
   }
 
 
